@@ -1,0 +1,139 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage[pdftex,
+pdfauthor={Anjalo Hettiarachchi},
+pdftitle={Performance Evaluation of Dynamic Round Robin Algorithms for CPU Scheduling},
+pdfsubject={Computer Science},
+pdfkeywords={CPU Scheduling,Round Robin (RR),Adaptive Scheduling,Dynamic Time Quantum,Manhattan Distance}]{hyperref}
+
+\newcommand{\BibTeX}{\textrm{B} \kern-.05em{\textsc{i} \kern-.025em b}\kern-.08em T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}
+
+\begin{document}
+
+    \title{Performance Evaluation of Dynamic Round Robin Algorithms for CPU Scheduling}
+
+    \author{
+        \IEEEauthorblockN{
+            Abdulaziz A. Alsulami\textsuperscript{1},
+            Qasem Abu Al-Haija\textsuperscript{2},
+            Mohammed I. Thanoon\textsuperscript{3},
+            Qian Mao\textsuperscript{4}
+        }
+        \vspace{1em}
+        \IEEEauthorblockA{
+            Department of Computer Information and Systems Engineering, Tennessee State University,\\
+            3500 John A. Merritt Boulevard, Nashville, TN 37209, USA\\
+            \\
+            \textsuperscript{1}aalsula3@my.tnstate.edu,
+            \textsuperscript{2}qabualha@my.tnstate.edu.sa,
+            \textsuperscript{3}mthanoon@my.tnstate.edu,
+            \textsuperscript{4}qmao@tnstate.edu,
+        }
+    }
+
+    \maketitle
+
+    \begin{abstract}
+        The performance of an operating system (OS) is
+        affected by the algorithm policy that is used by a CPU
+        to schedule the running processes.~Thus, a better CPU
+        scheduling algorithm results in faster OS performance
+        using minimal resources over small amounts of time [11].
+        For that reason, many algorithms were proposed and implemented
+        to enhance the performance of CPU scheduling.~Round Robin is
+        considered an efficient and fair algorithm because all
+        processes are given the same amount of time quantum.
+        However, its efficiency depends on the selected time quantum.
+        In this paper, we present a comparative study of four different
+        Round Robin algorithms namely: Adaptive Round Robin Algorithm,
+        Best Time Quantum Round Robin CPU Scheduling, Optimal Round
+        Robin Scheduling Using Manhattan Distance Algorithm, and
+        Improved Round Robin Scheduling Algorithm.~We compare these
+        algorithms in terms of four performance factors including:
+        Average Waiting Time (AWT), Average Turnaround Time (ATT),
+        Average Response Time (ART)~and Number of Contexts Switching (NCS).
+        The simulation results show that both Adaptive Round Robin
+        and Optimal Round Robin Scheduling Using Manhattan Distance
+        algorithms are more efficient to be adopted as they recorded
+        the minimum values of performance factors.
+    \end{abstract}
+
+    \vspace{1em}
+
+    \begin{IEEEkeywords}
+        CPU Scheduling, Round Robin (RR), Adaptive Scheduling, Dynamic Time Quantum, Manhattan Distance.
+    \end{IEEEkeywords}
+
+
+    \section{Introduction}
+    \label{sec:introduction}
+    \input{../sections/introduction}
+
+
+    \section{Related Work}
+    \label{sec:related-work}
+    In the last decade, several approaches and solutions tried to
+    address the efficient utilization of CPU scheduling algorithms
+    for processes and jobs (tasks) of the OS. For instance, authors
+    of [4] provided a survey study that compared between four
+    different algorithms (AAIRR, ERR, AAIRR and ERR).~Each
+    algorithm is executed using static and dynamic time quantum.
+    Also, there are three cases of generating burst time in case 1
+    the burst time was generated randomly, in case 2 burst time
+    was generated randomly but in a decreasing order and in case
+    3 the burst time was generated randomly but in an ascending
+    order.~It is assumed that all processes arrive at the same time
+    (arrival time = 0).~The authors use two criteria to examine the
+    performance of all four algorithms which is ART and ATT.\\
+
+    Also, in [9] authors compared between two different
+    algorithms which are the Improved Round Robin (IRR) which
+    has dynamic time quantum, and the basic round-robin which
+    has static time quantum.~Selecting the optimal algorithm was
+    based on three factors which are AWT, ATT and NCS. The
+    experiment has two ceases in case 1 the arrival time is equal
+    to 0, and the burst time is generated in an acceding order,
+    descending order and random.~In case 2 the arrival time is
+    different, and the burst time is generated in an acceding order,
+    descending order and random.\\
+
+    There are some limitations in these two researches such
+    as in [4] the authors only use two factors in the compression
+    between the four algorithms which are AWT and ATT however
+    in our research we add two more important factors ART
+    and NCS. In [9] Authors compared between two different
+    algorithms using three criteria AWT, ATT and NCS however
+    the method of generating the burst time, and the arrival time
+    was not mentioned.~In our research, we used exponential
+    distribution, and the reason of using such a model is explained in
+    the next section, Section III, ROUND-ROBIN SCHEDULING
+    ALGORITHMS.\@
+
+
+    \section{Conclusion and Remarks}
+    \label{sec:conclusion-and-remarks}
+    In conclusion, many Round Robin algorithms were
+    developed to maximize the efficiency of the CPU scheduling.
+    Therefore, there is a necessity to compare between them by
+    evaluating their performance using some criteria such as AWT,
+    ATT, ART and NCS. For that reason, this paper compared
+    between four different types of RR algorithm.~The simulation
+    results showed that both Adaptive Round Robin Algorithm and
+    Optimal Round Robin based Manhattan Distance Algorithm
+    are more efficient CPU scheduling techniques than Best Time
+    Quantum Round Robin CPU Scheduling and Improved Round
+    Robin Scheduling Algorithm since they recorded the best
+    performance results.
+
+    \bibliographystyle{plain}
+    \bibliography{../bib/document}
+
+\end{document}
