@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a custom conference paper template based on the original LateX example provided by [IEEE](http://ctan.imsc.res.in/macros/latex/contrib/IEEEtran/IEEEtran_HOWTO.pdf) and template from [Overleaf](https://www.overleaf.com/latex/templates/ieee-conference-template/grfzhhncsfqn). Use with IntelliJ IDEA by JetBrains&reg;.
+This is a custom IEEE conference paper template based on the original LateX example provided by [IEEE](http://ctan.imsc.res.in/macros/latex/contrib/IEEEtran/IEEEtran_HOWTO.pdf) and [Overleaf](https://www.overleaf.com/latex/templates/ieee-conference-template/grfzhhncsfqn) template. Use with IntelliJ IDEA by JetBrains&reg;.
 
 ## Requirements
 
